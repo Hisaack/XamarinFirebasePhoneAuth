@@ -1,7 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+	android:padding="24dp"
+	android:gravity="center_horizontal"
     android:layout_height="match_parent">
+	<TextView
+		android:id="@+id/textView1"
+		android:textSize="16sp"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:textColor="@android:color/black"
+		android:layout_height="wrap_content"
+		android:text="We shall be sending and sms to verify your phone number. Confirm then authorize verification"/>
+	<android.support.design.widget.TextInputEditText
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:hint="Code"
+		android:maxLines="1"
+		android:textColorHint="@android:color/black"
+		android:textColor="@android:color/black"
+		android:textSize="24sp"
+		android:layout_below="@+id/textView1"
+		android:id="@+id/countryCodeTxtInputEdtTxt"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"/>
+	<android.support.design.widget.TextInputEditText
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:id="@+id/phoneNumberTxtInputEdtTxt"
+		android:maxLines="1"
+		android:hint="Phone Number"
+		android:textColorHint="@android:color/black"
+		android:textColor="@android:color/black"
+		android:layout_marginLeft="12dp"
+		android:textSize="24sp"
+		android:layout_below="@+id/textView1"
+		android:gravity="left"
+		android:layout_toRightOf="@+id/countryCodeTxtInputEdtTxt"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+	<Button
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:id="@+id/authorizeVerificationBtn"
+		android:layout_width="match_parent"
+		android:textAllCaps="false"
+	    android:background="@color/colorPrimary"
+		android:textColor="@android:color/white"
+		android:layout_height="wrap_content"
+		android:text="Sign In"
+		android:textSize="16sp"
+		android:layout_below="@+id/countryCodeTxtInputEdtTxt"/>
+	<TextView
+		android:id="@+id/textView2"
+		android:textSize="16sp"
+		android:textColor="@android:color/white"
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Input Verification Code"
+		android:layout_below="@+id/authorizeVerificationBtn"/>
+	<TextView
+		android:id="@+id/verifyCodeTxtView"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:textColor="@android:color/white"
+		android:layout_marginTop="8dp"
+		android:layout_marginRight="24dp"
+		android:layout_marginBottom="8dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Verify"
+		android:clickable="true"
+		android:layout_below="@+id/textInputEditText1"/>
+	<TextView
+		android:id="@+id/resendCodeTxtView"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:textColor="@android:color/white"
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:layout_marginLeft="24dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Resend Code"
+		android:layout_toRightOf="@id/verifyCodeTxtView"
+		android:clickable="true"
+		android:layout_below="@+id/textInputEditText1"/>
+	<FrameLayout
+		android:layout_below="@+id/verifyCodeTxtView"
+		android:id="@+id/frameLayout1"
+		android:layout_width="match_parent"
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+		android:layout_height="match_parent"
+		android:padding="8dp"
+		android:background="#00000000"/>
 </RelativeLayout>
