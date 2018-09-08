@@ -39,7 +39,11 @@
 		android:gravity="left"
 		android:layout_toRightOf="@+id/countryCodeTxtInputEdtTxt"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
+		android:layout_height="wrap_content"
+		android:inputType="phone"
+		android:lines="1"
+		android:singleLine="true"
+		android:maxLength="9" />
 	<Button
 		android:layout_marginTop="8dp"
 		android:layout_marginBottom="8dp"
@@ -89,13 +93,5 @@
 		android:layout_toRightOf="@id/verifyCodeTxtView"
 		android:clickable="true"
 		android:layout_below="@+id/textInputEditText1"/>
-	<FrameLayout
-		android:layout_below="@+id/verifyCodeTxtView"
-		android:id="@+id/frameLayout1"
-		android:layout_width="match_parent"
-		android:layout_marginTop="8dp"
-		android:layout_marginBottom="8dp"
-		android:layout_height="match_parent"
-		android:padding="8dp"
-		android:background="#00000000"/>
+
 </RelativeLayout>
